@@ -2,7 +2,7 @@
 import Layout from '~/layouts/PageLayout.astro';
 
 import Header from '~/components/widgets/Header.astro';
-import Hero from '~/components/widgets/Hero.astro';
+import Hero from '~/components/widgets/Hero3.astro';
 import Content from '~/components/widgets/Content.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Features3 from '~/components/widgets/Features3.astro';
@@ -12,7 +12,7 @@ import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import { getPermalink } from '~/utils/permalinks';
 
 const metadata = {
-  title: 'Personal Homepage Demo',
+  title: 'switch2 release',
 };
 ---
 
@@ -30,7 +30,7 @@ const metadata = {
       ]}
       actions={[
         {
-          text: 'Hire me',
+          text: 'more',
           href: '#',
         },
       ]}
@@ -43,14 +43,14 @@ const metadata = {
 
   <Hero
     id="hero"
-    title="Sarah Johnson"
-    tagline="Personal Web Demo"
-    actions={[{ variant: 'primary', text: 'Hire me', href: getPermalink('/contact#form') }]}
+    title="Nintendo Switch 2 is coming!"
+    tagline="Switch2 news"
+    actions={[{ variant: 'primary', text: 'Play Now', href: getPermalink('https://www.nintendo.com/') }]}
+    image={{ src: 'https://images.ctfassets.net/o5v89n4kg6h4/6WMV825ssKruPmfFdsd413/7dad54c7e706fbc711ac757772b53ab4/TopPC_Successor_3.png', alt: 'AstroWind Hero Image' }}
   >
+  
     <Fragment slot="subtitle">
-      I'm a Graphic Designer passionate about crafting visual stories. <br /> With 5 years of experience and a degree from
-      New York University's School of Design. I infuse vitality into brands and designs, transforming concepts into captivating
-      realities.
+      With a stylish look, larger and clearer screen, and more convenient Joy-Con connection. Its performance is greatly improved and backward compatible, allowing you to play old games smoothly. It also has unique features and optimized design, bringing a more immersive and comfortable gaming experience for players. It's the expected choice for game lovers.
     </Fragment>
   </Hero>
 
