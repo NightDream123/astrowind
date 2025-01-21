@@ -12,7 +12,7 @@ import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import { getPermalink } from '~/utils/permalinks';
 
 const metadata = {
-  title: 'switch2 release',
+  // title: 'switch2 release',
 };
 ---
 
@@ -45,7 +45,7 @@ const metadata = {
     id="hero"
     title="Nintendo Switch 2 is coming!"
     tagline="Switch2 news"
-    actions={[{ variant: 'primary', text: 'Play Now', href: getPermalink('https://www.nintendo.com/') }]}
+    actions={[{ variant: 'primary', text: 'Watch Now', href: getPermalink('https://www.nintendo.com/successor/zh-tw/index.html') }]}
     image={{ src: 'https://images.ctfassets.net/o5v89n4kg6h4/6WMV825ssKruPmfFdsd413/7dad54c7e706fbc711ac757772b53ab4/TopPC_Successor_3.png', alt: 'AstroWind Hero Image' }}
   >
   
@@ -64,7 +64,7 @@ const metadata = {
         icon: 'tabler:brand-dribbble',
         callToAction: {
           target: '_blank',
-          text: 'Dribbble',
+          text: 'Bigger',
           href: '#',
         },
       },
@@ -72,7 +72,7 @@ const metadata = {
         icon: 'tabler:brand-behance',
         callToAction: {
           target: '_blank',
-          text: 'Behance',
+          text: 'Faster',
           href: '#',
         },
       },
@@ -80,30 +80,25 @@ const metadata = {
         icon: 'tabler:brand-pinterest',
         callToAction: {
           target: '_blank',
-          text: 'Pinterest',
+          text: 'Stronger',
           href: '#',
         },
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1491349174775-aaafddd81942?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+      src: 'https://images.ctfassets.net/o5v89n4kg6h4/1hdXVmw9iLs51w45hy7QfB/32d717ac5801304df8ccae0cf82c6059/switch_jamboree_240830_l.jpg',
       alt: 'Colorful Image',
       loading: 'eager',
     }}
   >
     <Fragment slot="content">
-      <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">About me</h2>
+      <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Game lineup</h2>
       <p>
-        Welcome to my creative journey. My work is a testament to my commitment to bringing ideas to life, where each
-        pixel becomes a brushstroke in the canvas of imagination.
+        Switch 2 will bring a better gaming experience and more powerful performance, bringing players unprecedented gaming experience.
       </p>
-      <br />
       <p>
-        I find inspiration in the world around me, whether through the pages of a captivating novel, the intricate
-        details of typography, or the vibrant hues of nature during my outdoor escapades.
+        The predicted game lineup for Switch 2, including action, adventure, racing, role-playing and more, meets the needs of different players. Among them, Mario Kart 9, the new 3D Mario game (possibly Mario: Odyssey 2), Metroid Prime 4, Zelda game enhancement (most likely Breath of the Wild) and other Nintendo's own classic IP titles are in the attention. Final Fantasy VII: Remastered, Assassin's Creed: Fantasy, The Division, Rainbow Six and other well-known game developers will also come to Switch 2, bringing players a richer gaming experience.
       </p>
-      <br />
-      <p>If you're curious to dive deeper into my work, you can follow me:</p>
     </Fragment>
 
     <Fragment slot="bg">
@@ -115,18 +110,24 @@ const metadata = {
 
   <Steps
     id="resume"
-    title="Work experience"
+    title="Switch2 Big Events"
     items={[
       {
         title:
-          'Graphic Designer <br /> <span class="font-normal">ABC Design Studio, New York, NY</span> <br /> <span class="text-sm font-normal">2021 - Present</span>',
-        description: `Collaborate with clients to understand design requirements and objectives. <br /> Develop branding solutions, including logos, color palettes, and brand guidelines. <br /> Design marketing materials such as brochures, posters, and digital assets. <br /> Create visually appealing user interfaces for websites and applications.`,
+          'Release trailer video <br /> <span class="text-sm font-normal">January 16,2025</span>',
+        description: `On the evening of January 16, Nintendo officially released a Switch 2 teaser video of only 2 minutes and 21 seconds. At the same time, it is announced that a special face-to-face meeting will be held on April 2, when the detailed hardware configuration, price and other information of Switch 2 will be announced.`,
         icon: 'tabler:briefcase',
       },
       {
         title:
-          'Junior Graphic Designer <br /> <span class="font-normal">XYZ Creative Agency, Los Angeles, CA</span> <br /> <span class="text-sm font-normal">2018 - 2021</span>',
-        description: `Assisted senior designers in creating design concepts and visual assets. <br /> Contributed to the development of brand identities and marketing collateral. <br /> Collaborated with the marketing team to ensure consistent design across campaigns. <br /> Gained hands-on experience in various design software and tools.`,
+          'Face-To-Face Meeting<br /> <span class="text-sm font-normal">April 2,2025</span>',
+        description: `Coming soon..`,
+        icon: 'tabler:briefcase',
+      },
+      {
+        title:
+          'Switch2 Release Date<br /> <span class="text-sm font-normal"? ?,2025</span>',
+        description: `Pending official announcement..`,
         icon: 'tabler:briefcase',
       },
     ]}
@@ -135,7 +136,7 @@ const metadata = {
 
   <!-- Steps Widget ****************** -->
 
-  <Steps
+  <!-- <Steps
     id="resume"
     title="Education"
     items={[
@@ -149,52 +150,52 @@ const metadata = {
       },
     ]}
     classes={{ container: 'max-w-3xl' }}
-  />
+  /> -->
 
   <!-- Features3 Widget ************** -->
 
   <Features3
-    title="Skills"
-    subtitle="Discover the proficiencies that allow me to bring imagination to life through design."
+    title="Switch2 Hardware configuration"
+    subtitle="Unofficial switch2 leaks."
     columns={3}
     defaultIcon="tabler:point-filled"
     items={[
       {
-        title: 'Graphic design',
-        description: 'Proficient in crafting visually appealing designs that convey messages effectively.',
+        title: 'Screen',
+        description: 'Screen size up to 8 inches, possibly IPS-LCD material.',
       },
       {
-        title: 'Branding and identity',
-        description: 'Skilled at developing cohesive brand identities, including logos and brand guidelines.',
+        title: 'Hand shank',
+        description: 'Joy-Con handle becomes larger, adopts magnetic fixation, adds Type-C interface at the top, left Joy-Con has a square screenshot button, right Joy-Con retains the home button and adds a new button under it, suspected Hall Joystick can prevent drift, and may also support mouse mode.',
       },
       {
-        title: 'User-centered design',
-        description: 'Experienced in creating user-friendly interfaces and optimizing user experiences.',
+        title: 'Fuselage',
+        description: 'The overall body remains light and portable, with a matte appearance that feels comfortable and is not easy to leave fingerprints, and a hollow-out bracket that can be adjusted at a larger Angle to make it easier to adjust to the right Angle in desktop mode.',
       },
       {
-        title: 'Adobe Creative Suite',
-        description: 'Skilled in using Photoshop, Illustrator, and InDesign to create and edit visual elements.',
+        title: 'CPU',
+        description: `It may be powered by Nvidia's custom T239 chip, an Arm Cortex-A78AE CPU with ${8} or ${12} cores, and an Ampere architecture-based GPU with ray tracing, DLSS 3, and AV1 codec support. Graphics performance is expected to be comparable to the RTX 3050 4GB mobile version.`,
       },
       {
-        title: 'Typography',
-        description: 'Adept in selecting and manipulating typefaces to enhance design aesthetics.',
+        title: 'RAM',
+        description: 'It may come with 12GB of RAM, significantly improving multitasking and gaming performance.',
       },
       {
-        title: 'Color theory',
-        description: 'Proficient in using color to evoke emotions and enhance visual harmony.',
+        title: 'Port',
+        description: 'The top and bottom are each equipped with a USB Type-C port for easier charging and external device connection.',
       },
-      {
-        title: 'Print and digital design',
-        description: 'Knowledgeable in designing for both print materials and digital platforms.',
-      },
-      {
-        title: 'Attention to detail',
-        description: 'Diligent in maintaining precision and quality in all design work.',
-      },
-      {
-        title: 'Adaptability',
-        description: 'Quick to adapt to new design trends, technologies, and client preferences.',
-      },
+      // {
+      //   title: 'Print and digital design',
+      //   description: 'Knowledgeable in designing for both print materials and digital platforms.',
+      // },
+      // {
+      //   title: 'Attention to detail',
+      //   description: 'Diligent in maintaining precision and quality in all design work.',
+      // },
+      // {
+      //   title: 'Adaptability',
+      //   description: 'Quick to adapt to new design trends, technologies, and client preferences.',
+      // },
     ]}
   />
 

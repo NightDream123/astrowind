@@ -9,14 +9,14 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: Switch2Game
-    template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    default: Switch2 games and news, guides, and more.
+    template: '%s — Switch2Game'
+  description: "\U0001F680 This is the hub for Nintendo Switch 2 games and info. We offer the latest and most comprehensive game introductions, reviews and guides."
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: Switch2Game
     images:
       - url: '~/assets/images/default.png'
         width: 1200
