@@ -1,0 +1,66 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Header from '~/components/widgets/Header.astro';
+import Hero from '~/components/widgets/Hero3.astro';
+import { headerData2 } from '~/navigation';
+const metadata = {
+  title: 'Games Zone',
+};
+
+const games = [
+  {
+    title: 'Pokemon: Let\'s Go, Pikachu!',
+    image: 'https://www.nintendoswitch.com.cn/adw2b/img/top_main.jpg',
+    link: '#',
+  },
+  {
+    title: 'Pokemon: Let\'s Go, Eevee!',
+    image: 'https://www.nintendoswitch.com.cn/adw2b/img/top_main.jpg',
+    link: '#',
+  },
+  {
+    title: 'Immortals Fenyx Rising',
+    image: 'https://switch-cn.gtgres.com/global-image/c27ca7b0-6e90-11ef-ae2c-79691359b5a7.jpg?imageMogr2/format/webp/quality/100',
+    link: '#',
+  },
+  {
+    title: 'Daemon X Machina',
+    image: 'https://switch-cn.gtgres.com/global-image/e7fa5d20-6a99-11ef-ae2c-79691359b5a7.jpg?imageMogr2/format/webp/quality/100',
+    link: '#',
+  }
+]
+---
+
+<Layout metadata={metadata}>
+  <Fragment slot="announcement"></Fragment>
+  <Fragment slot="header">
+    <Header
+    {...headerData2} isSticky showRssFeed showToggleTheme
+    />
+
+  </Fragment>
+  <!-- Hero Section -->
+  <Hero
+    image={{ src: 'https://metadata-images.nintendoswitch.com.cn/formal/8283809551597-4FF871DF-0D83-8ACD-2494-356F6D9C0E90-%E5%8D%A1%E6%AF%94%E5%AE%98%E7%BD%91%E5%9B%BE-3963-1512-2.jpg?imageMogr2/format/webp/quality/100', alt: 'Kirby' }}
+    title="Kirby Star Allies"
+    subtitle="Join your friends on an exciting new adventure!"
+  />
+
+  <section class="py-12 px-4 mx-auto max-w-6xl">
+    <h2 class="text-3xl font-bold text-center mb-8">Available Games and Tools</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {games.map(game => (
+        <a href={game.link} class="block group">
+          <div class="bg-white dark:bg-slate-900 rounded-lg overflow-hidden shadow-lg transition hover:shadow-xl">
+            <img src={game.image} alt={game.title} class="w-full h-48 object-cover" />
+            <div class="p-4">
+              <h3 class="text-lg font-semibold group-hover:text-primary">{game.title}</h3>
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+</Layout>

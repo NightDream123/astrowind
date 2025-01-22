@@ -117,7 +117,19 @@ export const headerData = {
   ],
   actions: [{ text: 'Download', href: 'https://github.com/onwidget/astrowind', target: '_blank' }],
 };
-
+export const headerData2 = {
+  links:[
+    { text: 'Home', href: getPermalink('/') },
+    { text: 'Games&Tools', href: getPermalink('/homes/games') },
+    { text: 'Blog', href: getBlogPermalink() },
+    {
+      text: 'Privacy policy',
+      href: getPermalink('/privacy'),
+    },
+    { text: 'Terms', href: getPermalink('/terms') },
+  ],
+  actions: [{ text: 'official', href: 'https://www.nintendo.com', target: '_blank' }],
+};
 export const footerData = {
   links: [
     {
