@@ -67,6 +67,53 @@ const metadata = {
 />
 
 <!-- Steps Widget ****************** -->
+ <!-- Features3 Widget ************** -->
+
+ <Features3
+ title="Switch2 Hardware configuration"
+ subtitle="Unofficial switch2 leaks."
+ columns={3}
+ defaultIcon="tabler:point-filled"
+ items={[
+   {
+     title: 'Screen',
+     description: 'Screen size up to 8 inches, possibly IPS-LCD material.',
+   },
+   {
+     title: 'Hand shank',
+     description: 'Joy-Con handle becomes larger, adopts magnetic fixation, adds Type-C interface at the top, left Joy-Con has a square screenshot button, right Joy-Con retains the home button and adds a new button under it, suspected Hall Joystick can prevent drift, and may also support mouse mode.',
+   },
+   {
+     title: 'Fuselage',
+     description: 'The overall body remains light and portable, with a matte appearance that feels comfortable and is not easy to leave fingerprints, and a hollow-out bracket that can be adjusted at a larger Angle to make it easier to adjust to the right Angle in desktop mode.',
+   },
+   {
+     title: 'CPU',
+     description: `It may be powered by Nvidia's custom T239 chip, an Arm Cortex-A78AE CPU with ${8} or ${12} cores, and an Ampere architecture-based GPU with ray tracing, DLSS 3, and AV1 codec support. Graphics performance is expected to be comparable to the RTX 3050 4GB mobile version.`,
+   },
+   {
+     title: 'RAM',
+     description: 'It may come with 12GB of RAM, significantly improving multitasking and gaming performance.',
+   },
+   {
+     title: 'Port',
+     description: 'The top and bottom are each equipped with a USB Type-C port for easier charging and external device connection.',
+   },
+   // {
+   //   title: 'Print and digital design',
+   //   description: 'Knowledgeable in designing for both print materials and digital platforms.',
+   // },
+   // {
+   //   title: 'Attention to detail',
+   //   description: 'Diligent in maintaining precision and quality in all design work.',
+   // },
+   // {
+   //   title: 'Adaptability',
+   //   description: 'Quick to adapt to new design trends, technologies, and client preferences.',
+   // },
+ ]}
+/>
+
   <!-- Content Widget **************** -->
 
   <Content
@@ -119,7 +166,7 @@ const metadata = {
     </Fragment>
   </Content>
 
-  <Content
+  <!-- <Content
     isReversed
     isAfterContent={true}
     items={[
@@ -153,7 +200,7 @@ const metadata = {
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Content>
- 
+  -->
 
   <!-- <Steps
     id="resume"
@@ -171,53 +218,7 @@ const metadata = {
     classes={{ container: 'max-w-3xl' }}
   /> -->
 
-  <!-- Features3 Widget ************** -->
-
-  <Features3
-    title="Switch2 Hardware configuration"
-    subtitle="Unofficial switch2 leaks."
-    columns={3}
-    defaultIcon="tabler:point-filled"
-    items={[
-      {
-        title: 'Screen',
-        description: 'Screen size up to 8 inches, possibly IPS-LCD material.',
-      },
-      {
-        title: 'Hand shank',
-        description: 'Joy-Con handle becomes larger, adopts magnetic fixation, adds Type-C interface at the top, left Joy-Con has a square screenshot button, right Joy-Con retains the home button and adds a new button under it, suspected Hall Joystick can prevent drift, and may also support mouse mode.',
-      },
-      {
-        title: 'Fuselage',
-        description: 'The overall body remains light and portable, with a matte appearance that feels comfortable and is not easy to leave fingerprints, and a hollow-out bracket that can be adjusted at a larger Angle to make it easier to adjust to the right Angle in desktop mode.',
-      },
-      {
-        title: 'CPU',
-        description: `It may be powered by Nvidia's custom T239 chip, an Arm Cortex-A78AE CPU with ${8} or ${12} cores, and an Ampere architecture-based GPU with ray tracing, DLSS 3, and AV1 codec support. Graphics performance is expected to be comparable to the RTX 3050 4GB mobile version.`,
-      },
-      {
-        title: 'RAM',
-        description: 'It may come with 12GB of RAM, significantly improving multitasking and gaming performance.',
-      },
-      {
-        title: 'Port',
-        description: 'The top and bottom are each equipped with a USB Type-C port for easier charging and external device connection.',
-      },
-      // {
-      //   title: 'Print and digital design',
-      //   description: 'Knowledgeable in designing for both print materials and digital platforms.',
-      // },
-      // {
-      //   title: 'Attention to detail',
-      //   description: 'Diligent in maintaining precision and quality in all design work.',
-      // },
-      // {
-      //   title: 'Adaptability',
-      //   description: 'Quick to adapt to new design trends, technologies, and client preferences.',
-      // },
-    ]}
-  />
-
+  
   <!-- Content Widget **************** -->
 
   
@@ -231,66 +232,38 @@ const metadata = {
   <!-- Testimonials Widget *********** -->
 
   <Testimonials
-    title="Client testimonials"
-    subtitle="Discover what clients have to say about their experiences working with me."
+    title="Game Reviews"
+    subtitle="Discover what players are saying about popular Switch games"
     testimonials={[
       {
-        testimonial: `She took our vague concept and turned it into a visual masterpiece that perfectly aligned with our goals. Her attention to detail and ability to translate ideas into compelling visuals exceeded our expectations.`,
+        testimonial: `The Legend of Zelda: Tears of the Kingdom is a masterpiece! The vast open world and creative building mechanics offer endless possibilities. The attention to detail and freedom to explore make every moment exciting.`,
         name: 'Mark Thompson',
-        job: 'Creative director',
+        job: 'Adventure Game Enthusiast',
         image: {
           src: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
           alt: 'Mark Thompson Image',
         },
       },
       {
-        testimonial: `She transformed our brand identity with her creative finesse, capturing our essence in every element. Her dedication and talent truly shine through her work.`,
+        testimonial: `Super Mario Wonder brings back the classic Mario magic with innovative new features. The Wonder effects transform levels in surprising ways, and multiplayer mode is incredibly fun with friends and family.`,
         name: 'Emily Martinez',
-        job: 'CEO',
+        job: 'Platform Game Player',
         image: {
           src: 'https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=772&q=80',
           alt: 'Emily Martinez Image',
         },
       },
       {
-        testimonial: `She has an uncanny ability to communicate emotions and stories. She crafted a logo for our NGO that not only represents our cause but also evokes empathy. Her professionalism and commitment make her a designer of exceptional caliber.`,
+        testimonial: `Pokemon Scarlet/Violet's open-world design is revolutionary for the series. The freedom to explore and catch Pokemon in a truly open environment is amazing. The new Terastal phenomenon adds an exciting twist to battles.`,
         name: 'Laura Simmons',
-        job: 'Founder of an NGO',
+        job: 'Pokemon Trainer',
         image: {
           src: 'https://images.unsplash.com/photo-1554727242-741c14fa561c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
           alt: 'Laura Simmons Image',
         },
-      },
-      {
-        testimonial: `We entrusted Sarah with revamping our website's user interface, and the results were astounding. Her intuitive design sense enhanced user experience, leading to a significant increase in engagement. She's a designer who truly understands the synergy of aesthetics and functionality.`,
-        name: 'Alex Foster',
-        job: 'Director of web services',
-        image: {
-          src: 'https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-          alt: 'Alex Foster Image',
-        },
-      },
-      {
-        testimonial: `She took our vision and elevated it beyond imagination. Her ability to capture brand essence and translate it into design is nothing short of remarkable. Working with her has been an inspiring journey.`,
-        name: 'Jessica Collins',
-        job: 'Product Manager',
-        image: {
-          src: 'https://images.unsplash.com/photo-1548142813-c348350df52b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=778&q=80',
-          alt: 'Jessica Collins Image',
-        },
-      },
-      {
-        testimonial: `Her ability to transform concepts into captivating visuals is nothing short of extraordinary. She took our event poster idea and turned it into a visual masterpiece that perfectly captured the essence of our festival. Sarah's dedication, creativity, and knack for delivering beyond expectations make her an invaluable asset to any project.`,
-        name: 'Michael Carter',
-        job: 'Event Coordinator',
-        image: {
-          src: 'https://images.unsplash.com/photo-1566492031773-4f4e44671857?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-          alt: 'Michael Carter Image',
-        },
-      },
+      }
     ]}
   />
-
   <!-- CallToAction Widget *********** -->
 
   <CallToAction
@@ -299,7 +272,7 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: 'Hire me',
+        text: 'Ads',
         href: '/',
       },
     ]}
