@@ -4,6 +4,9 @@ import { fileURLToPath } from 'url';
 import { defineConfig } from 'astro/config';
 
 import sitemap from '@astrojs/sitemap';
+import { i18n, filterSitemapByDefaultLocale } from "astro-i18n-aut/integration";
+import { ANALYTICS, SITE, I18N } from './src/utils/config.ts';
+
 import tailwind from '@astrojs/tailwind';
 import mdx from '@astrojs/mdx';
 import partytown from '@astrojs/partytown';
@@ -22,13 +25,38 @@ const whenExternalScripts = (items: (() => AstroIntegration) | (() => AstroInteg
   hasExternalScripts ? (Array.isArray(items) ? items.map((item) => item()) : [items()]) : [];
 
 export default defineConfig({
+  site: SITE.site,
+  base: SITE.base,
+  trailingSlash: SITE.trailingSlash ? 'always' : 'never',
+  
+  build: {
+    format: SITE.trailingSlash ? "directory" : "file"
+  },
   output: 'static',
 
   integrations: [
     tailwind({
       applyBaseStyles: false,
     }),
-    sitemap(),
+      // Conditionally add i18n and sitemap based on I18N.isEnabled
+    ...(I18N.isEnabled
+        ? [
+            i18n({
+              locales: I18N.locales,
+              defaultLocale: I18N.defaultLocale,
+            }),
+            sitemap({
+              i18n: {
+                locales: I18N.locales,
+                defaultLocale: I18N.defaultLocale,
+              },
+              filter: filterSitemapByDefaultLocale({ defaultLocale: I18N.defaultLocale }),
+            }),
+          ]
+        : [
+            sitemap({}),
+          ]),
+      
     mdx(),
     icon({
       include: {

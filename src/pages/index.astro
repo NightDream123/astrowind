@@ -10,9 +10,13 @@ import Testimonials from '~/components/widgets/Testimonials.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import { getPermalink } from '~/utils/permalinks';
-import { headerData2 } from '~/navigation';
+import { getHeaderData } from '~/navigation';
+import { getLocaleFromUrl, useTranslations } from '~/i18n/translator';
+const { t, tList } = useTranslations(getLocaleFromUrl(Astro.url));
+const headerData2 = getHeaderData(getLocaleFromUrl(Astro.url));
+
 const metadata = {
-  // title: 'switch2 release',
+  title: t('index.metadata.title'),
 };
 ---
 
@@ -28,38 +32,35 @@ const metadata = {
 
   <Hero
     id="hero"
-    title="Nintendo Switch 2 is coming!"
-    tagline="Switch2 news"
-    actions={[{ variant: 'primary', text: 'Watch Now', href: getPermalink('https://www.nintendo.com/successor/zh-tw/index.html') }]}
+    title={t('index.hero.title.part1')}
+    tagline={t('index.hero.tagline')}
+    actions={[{ variant: 'primary', text: t('index.hero.cta2'), href: getPermalink('https://www.nintendo.com/successor/zh-tw/index.html') }]}
     image={{ src: 'https://images.ctfassets.net/o5v89n4kg6h4/6WMV825ssKruPmfFdsd413/7dad54c7e706fbc711ac757772b53ab4/TopPC_Successor_3.png', alt: 'AstroWind Hero Image' }}
   >
   
     <Fragment slot="subtitle">
-      With a stylish look, larger and clearer screen, and more convenient Joy-Con connection. Its performance is greatly improved and backward compatible, allowing you to play old games smoothly. It also has unique features and optimized design, bringing a more immersive and comfortable gaming experience for players. It's the expected choice for game lovers.
+      {t('index.hero.subtitle')}
     </Fragment>
   </Hero>
  <!-- Steps Widget ****************** -->
 
  <Steps
  id="resume"
- title="Switch2 Big Events"
+ title={t('index.steps.title')}
  items={[
    {
-     title:
-       'Release trailer video <br /> <span class="text-sm font-normal">January 16,2025</span>',
-     description: `On the evening of January 16, Nintendo officially released a Switch 2 teaser video of only 2 minutes and 21 seconds. At the same time, it is announced that a special face-to-face meeting will be held on April 2, when the detailed hardware configuration, price and other information of Switch 2 will be announced.`,
+     title:t('index.steps.items1.title'),
+     description: t('index.steps.items1.description'),
      icon: 'tabler:briefcase',
    },
    {
-     title:
-       'Face-To-Face Meeting<br /> <span class="text-sm font-normal">April 2,2025</span>',
-     description: `Coming soon..`,
+    title:t('index.steps.items2.title'),
+    description: t('index.steps.items2.description'),
      icon: 'tabler:briefcase',
    },
    {
-     title:
-       'Switch2 Release Date<br /> <span class="text-sm font-normal"? ?,2025</span>',
-     description: `Pending official announcement..`,
+    title:t('index.steps.items3.title'),
+    description: t('index.steps.items3.description'),
      icon: 'tabler:briefcase',
    },
  ]}
@@ -70,34 +71,34 @@ const metadata = {
  <!-- Features3 Widget ************** -->
 
  <Features3
- title="Switch2 Hardware configuration"
- subtitle="Unofficial switch2 leaks."
+ title={t('index.features.title')}
+ subtitle={t('index.features.subtitle')}
  columns={3}
  defaultIcon="tabler:point-filled"
  items={[
    {
-     title: 'Screen',
-     description: 'Screen size up to 8 inches, possibly IPS-LCD material.',
+     title: t('index.features.items1.title'),
+     description: t('index.features.items1.description'),
    },
    {
-     title: 'Hand shank',
-     description: 'Joy-Con handle becomes larger, adopts magnetic fixation, adds Type-C interface at the top, left Joy-Con has a square screenshot button, right Joy-Con retains the home button and adds a new button under it, suspected Hall Joystick can prevent drift, and may also support mouse mode.',
+     title: t('index.features.items2.title'),
+     description: t('index.features.items2.description'),
    },
    {
-     title: 'Fuselage',
-     description: 'The overall body remains light and portable, with a matte appearance that feels comfortable and is not easy to leave fingerprints, and a hollow-out bracket that can be adjusted at a larger Angle to make it easier to adjust to the right Angle in desktop mode.',
+     title: t('index.features.items3.title'),
+     description: t('index.features.items3.description'),
    },
    {
-     title: 'CPU',
-     description: `It may be powered by Nvidia's custom T239 chip, an Arm Cortex-A78AE CPU with ${8} or ${12} cores, and an Ampere architecture-based GPU with ray tracing, DLSS 3, and AV1 codec support. Graphics performance is expected to be comparable to the RTX 3050 4GB mobile version.`,
+     title: t('index.features.items4.title'),
+     description: t('index.features.items4.description'),
    },
    {
-     title: 'RAM',
-     description: 'It may come with 12GB of RAM, significantly improving multitasking and gaming performance.',
+     title: t('index.features.items5.title'),
+     description: t('index.features.items5.description'),
    },
    {
-     title: 'Port',
-     description: 'The top and bottom are each equipped with a USB Type-C port for easier charging and external device connection.',
+     title: t('index.features.items6.title'),
+     description: t('index.features.items6.description'),
    },
    // {
    //   title: 'Print and digital design',
@@ -152,12 +153,12 @@ const metadata = {
     }}
   >
     <Fragment slot="content">
-      <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Game lineup</h2>
+      <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">{t('index.fragment.h2')}</h2>
       <p>
-        Switch2 will bring a better gaming experience and more powerful performance, bringing players unprecedented gaming experience.
+        {t('index.fragment.p1')}
       </p>
       <p>
-        The predicted game lineup for Switch 2, including action, adventure, racing, role-playing and more, meets the needs of different players. Among them, Mario Kart 9, the new 3D Mario game (possibly Mario: Odyssey 2), Metroid Prime 4, Zelda game enhancement (most likely Breath of the Wild) and other Nintendo's own classic IP titles are in the attention. Final Fantasy VII: Remastered, Assassin's Creed: Fantasy, The Division, Rainbow Six and other well-known game developers will also come to Switch 2, bringing players a richer gaming experience.
+        {t('index.fragment.p2')}
       </p>
     </Fragment>
 
@@ -232,31 +233,31 @@ const metadata = {
   <!-- Testimonials Widget *********** -->
 
   <Testimonials
-    title="Game Reviews"
-    subtitle="Discover what players are saying about popular Switch games"
+    title={t('index.testimonials.title')}
+    subtitle={t('index.testimonials.subtitle')}
     testimonials={[
       {
-        testimonial: `The Legend of Zelda: Tears of the Kingdom is a masterpiece! The vast open world and creative building mechanics offer endless possibilities. The attention to detail and freedom to explore make every moment exciting.`,
+        testimonial:t('index.testimonials.item1.testimonial'),
         name: 'Mark Thompson',
-        job: 'Adventure Game Enthusiast',
+        job: t('index.testimonials.item1.job'),
         image: {
           src: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
           alt: 'Mark Thompson Image',
         },
       },
       {
-        testimonial: `Super Mario Wonder brings back the classic Mario magic with innovative new features. The Wonder effects transform levels in surprising ways, and multiplayer mode is incredibly fun with friends and family.`,
+        testimonial:t('index.testimonials.item2.testimonial'),
         name: 'Emily Martinez',
-        job: 'Platform Game Player',
+        job: t('index.testimonials.item2.job'),
         image: {
           src: 'https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=772&q=80',
           alt: 'Emily Martinez Image',
         },
       },
       {
-        testimonial: `Pokemon Scarlet/Violet's open-world design is revolutionary for the series. The freedom to explore and catch Pokemon in a truly open environment is amazing. The new Terastal phenomenon adds an exciting twist to battles.`,
+        testimonial:t('index.testimonials.item3.testimonial'),
         name: 'Laura Simmons',
-        job: 'Pokemon Trainer',
+        job: t('index.testimonials.item3.job'),
         image: {
           src: 'https://images.unsplash.com/photo-1554727242-741c14fa561c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
           alt: 'Laura Simmons Image',

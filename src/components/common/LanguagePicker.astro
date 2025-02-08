@@ -1,0 +1,58 @@
+---
+import { getLanguageFromURL, KNOWN_LANGUAGES } from '~/utils/i18n';
+import { getLocale } from 'astro-i18n-aut';
+import { I18N } from '~/utils/config';
+
+const currentPage = Astro.url.pathname;
+const currentLocale = getLocale(Astro.url);
+
+// 新增：处理路径的函数
+function getNewPath(code: string, currentPath: string) {
+  // 获取所有配置的语言代码
+  const languageCodes = Object.keys(I18N.locales);
+  
+  // 处理首页特殊情况
+  if (currentPath === '/' || languageCodes.some(lang => currentPath === `/${lang}`)) {
+    return `/${code}`;
+  }
+  
+  // 处理其他页面
+  const langPattern = new RegExp(`^/(${languageCodes.join('|')})/`);
+  if (currentPath.match(langPattern)) {
+    return currentPath.replace(langPattern, `/${code}/`);
+  }
+  return `/${code}${currentPath}`;
+}
+---
+
+<div class="language-select-wrapper">
+  <select
+    class="language-select"
+    value={currentLocale}
+    onchange="window.location.pathname = this.value"
+  >
+    {Object.entries(I18N.locales).map(([code, label]) => (
+      <option 
+        value={getNewPath(code, currentPage)}
+        selected={code === currentLocale}
+      >
+        {label}
+      </option>
+    ))}
+  </select>
+</div>
+
+<style>
+  .language-select-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .language-select {
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+    border: 1px solid var(--aw-color-primary);
+    background: var(--aw-color-bg-page);
+    color: var(--aw-color-text-default);
+  }
+</style>

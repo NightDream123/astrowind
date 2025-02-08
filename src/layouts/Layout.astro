@@ -16,7 +16,11 @@ import BasicScripts from '~/components/common/BasicScripts.astro';
 import { ClientRouter } from 'astro:transitions';
 
 import type { MetaData as MetaDataType } from '~/types';
+import { getLanguageFromURL, useTranslations } from '~/utils/i18n';
 
+const pathname = Astro.url.pathname;
+const currentLang = getLanguageFromURL(pathname);
+const t = useTranslations(currentLang as "en" | "zh");
 export interface Props {
   metadata?: MetaDataType;
 }
@@ -26,7 +30,7 @@ const { language, textDirection } = I18N;
 ---
 
 <!doctype html>
-<html lang={language} dir={textDirection} class="2xl:text-[20px]">
+<html lang={currentLang} dir={textDirection} class="2xl:text-[20px]">
   <head>
     <CommonMeta />
     <Favicons />
@@ -35,14 +39,11 @@ const { language, textDirection } = I18N;
     <Metadata {...metadata} />
     <SiteVerification />
     <Analytics />
-
-    <!-- Comment the line below to disable View Transitions -->
     <ClientRouter fallback="swap" />
   </head>
 
   <body class="antialiased text-default bg-page tracking-tight">
     <slot />
-
     <BasicScripts />
   </body>
 </html>

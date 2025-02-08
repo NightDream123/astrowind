@@ -1,5 +1,6 @@
-import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
-
+import { getLocalizedPermalink,getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
+import { getLanguageFromURL } from '~/utils/i18n';
+import { useTranslations } from '~/i18n/translator';
 export const headerData = {
   links: [
     {
@@ -117,19 +118,35 @@ export const headerData = {
   ],
   actions: [{ text: 'Download', href: 'https://github.com/onwidget/astrowind', target: '_blank' }],
 };
-export const headerData2 = {
+export const getHeaderData = (locale) => {
+  const { t } = useTranslations(locale);
+  return {
   links:[
-    { text: 'Home', href: getPermalink('/') },
-    { text: 'Games&Tools', href: getPermalink('/homes/games') },
-    { text: 'Blog', href: getBlogPermalink() },
-    {
-      text: 'Privacy policy',
-      href: getPermalink('/privacy'),
+    { 
+      text: t('header.home'), 
+      href: getLocalizedPermalink(locale,'/')
     },
-    { text: 'Terms', href: getPermalink('/terms') },
+    { 
+      text: t('header.games'), 
+      href: getLocalizedPermalink(locale,'/homes/games')
+    },
+    { 
+      text: t('header.blog'), 
+      href: getBlogPermalink()
+    },
+    {
+      text: t('header.privacy'), 
+      href: getLocalizedPermalink(locale,'/privacy'),
+    },
+    { 
+      text: t('header.term'), 
+      href: getLocalizedPermalink(locale,'/terms')
+    },
   ],
-  actions: [{ text: 'official', href: 'https://www.nintendo.com', target: '_blank' }],
+  actions: [{ text: t('header.official'), href: 'https://www.nintendo.com', target: '_blank' }],
+ };
 };
+
 export const footerData = {
   links: [
     {

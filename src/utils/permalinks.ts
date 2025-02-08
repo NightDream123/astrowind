@@ -1,8 +1,10 @@
 import slugify from 'limax';
 
 import { SITE, APP_BLOG } from 'astrowind:config';
+import { I18N } from '~/utils/config';
 
 import { trim } from '~/utils/utils';
+import { getLanguageFromURL } from '~/utils/i18n';
 
 export const trimSlash = (s: string) => trim(trim(s, '/'));
 const createPath = (...params: string[]) => {
@@ -132,3 +134,14 @@ export const applyGetPermalinks = (menu: object = {}) => {
   }
   return menu;
 };
+
+export const getLocalizedPermalink = (locale, slug = '', type = 'page'): string => {
+  const permalink = getPermalink(slug, type);
+  return locale === I18N.defaultLocale ? permalink : createPath(locale, permalink);
+}
+
+/** */
+export const getLocalizedHomePermalink = (locale): string => getLocalizedPermalink(locale, '/');
+
+/** */
+export const getLocalizedBlogPermalink = (locale): string => getLocalizedPermalink(locale, BLOG_BASE);

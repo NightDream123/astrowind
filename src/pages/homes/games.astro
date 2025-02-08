@@ -3,7 +3,11 @@ import Layout from '~/layouts/PageLayout.astro';
 
 import Header from '~/components/widgets/Header.astro';
 import Hero from '~/components/widgets/Hero3.astro';
-import { headerData2 } from '~/navigation';
+import { getHeaderData } from '~/navigation';
+import { getLocaleFromUrl, useTranslations } from '~/i18n/translator';
+const { t, tList } = useTranslations(getLocaleFromUrl(Astro.url));
+const headerData2 = getHeaderData(getLocaleFromUrl(Astro.url));
+
 const metadata = {
   title: 'Games Zone',
 };

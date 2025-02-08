@@ -2,7 +2,7 @@
 import { Icon } from 'astro-icon/components';
 import { SITE } from 'astrowind:config';
 import { getHomePermalink } from '~/utils/permalinks';
-
+import LanguagePicker from '~/components/common/LanguagePicker.astro';
 interface Link {
   text?: string;
   href?: string;
@@ -96,9 +96,12 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
         )
       }
 
-      <div class="text-sm mr-4 dark:text-muted">
-        <Fragment set:html={footNote} />
-      </div>
+<div class="flex items-center gap-4">
+  <LanguagePicker />
+  <div class="text-sm mr-4 dark:text-muted">
+    <Fragment set:html={footNote} />
+  </div>
+</div>
     </div>
   </div>
 </footer>
