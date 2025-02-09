@@ -5,6 +5,7 @@ site:
   trailingSlash: false
 
   googleSiteVerificationId: orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M
+  googleAdsenseId: ca-pub-6574731833705989  # 添加这一行
 
 # Default SEO metadata
 metadata:
