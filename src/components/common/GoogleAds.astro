@@ -1,0 +1,11 @@
+---
+import { SITE } from 'astrowind:config';
+---
+
+{
+  SITE.googleAdsenseId ? (
+  
+<script async src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${SITE.googleAdsenseId}`}
+     crossorigin="anonymous"></script>
+  ) : null
+}
