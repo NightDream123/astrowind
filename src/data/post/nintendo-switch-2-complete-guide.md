@@ -1,8 +1,8 @@
 ---
 publishDate: 2025-01-15T00:00:00Z
 author: Gaming Expert
-title: "Nintendo Switch 2: Everything We Know - Release Date, Price, Specs, and Latest Leaks"
-excerpt: Comprehensive guide to Nintendo Switch 2 - Get the latest information about release date, pricing, technical specifications, and leaked features. Stay updated with the most reliable Switch 2 news and rumors.
+title: "Nintendo Switch 2: Release Date, Specs & Leaks Explained"
+excerpt: Discover the latest on Nintendo Switch 2- release date, pricing, specs, and leaks. Stay updated for everything you need to know about the new console.
 image: https://switch-cn.gtgres.com/home/_dynamic/img/edfab02.png?imageMogr2/format/webp/quality/100?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1651&q=80
 category: Gaming News
 tags:
