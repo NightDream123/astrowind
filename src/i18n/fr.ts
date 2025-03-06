@@ -130,5 +130,19 @@ export const fr = {
           job: 'Dresseur Pokémon',
         },
       },
+      faqs: {
+        item1: {
+          question: 'Quel est le prix de la Switch2 ?',
+          answer: 'Bien que Nintendo n\'ait pas encore annoncé officiellement le prix de la Switch 2, les analystes du secteur s\'attendent à un prix compris entre 349 et 399 dollars. Le prix de vente final sera probablement révélé à l\'approche de la date de lancement. Gardez à l\'esprit que différentes éditions ou bundles pourront être proposés à des prix différents.',
+        },
+        item2: {
+          question: 'Quand la Switch2 sera-t-elle lancée ?',
+          answer: 'Nintendo a confirmé que la Switch 2 (successeur de la Nintendo Switch) sortira en 2024. Bien que la date exacte de sortie n\'ait pas encore été annoncée, les experts du secteur prévoient un lancement au second semestre 2024. Nintendo lance généralement son matériel majeur pendant la période des fêtes pour maximiser les ventes.',
+        },
+        item3: {
+          question: 'En se référant à l\'illustration, quel est le problème de connexion entre Switch1 et Switch2 ?',
+          answer: 'Les problèmes de connexion les plus courants entre Switch1 et Switch2 comprennent des incompatibilités de configuration VLAN, des problèmes de paramétrage des ports trunk et des problèmes de convergence STP. Pour résoudre ces problèmes, il faut vérifier que les configurations VLAN correspondent sur les deux switches, s\'assurer que les ports trunk sont correctement configurés et vérifier les paramètres du protocole Spanning Tree.',
+        },
+      },
     },
   };

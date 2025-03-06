@@ -149,5 +149,23 @@ export const en = {
           job: 'Pokemon Trainer',
         },
     },
+    faqs:{
+      item1: 
+          {
+            answer:'While Nintendo has not officially announced the price for the Switch 2, industry analysts expect it to be priced between $349 to $399. The final retail price will likely be revealed closer to the launch date. Keep in mind that different editions or bundles may be available at different price points.',
+            question: 'how much is switch2?',
+          },
+          item2: 
+          {
+            answer:'While Nintendo has not officially announced the price for the Switch 2, industry analysts expect it to be priced between $349 to $399. The final retail price will likely be revealed closer to the launch date. Keep in mind that different editions or bundles may be available at different price points.',
+            question: 'When will Switch 2 be released?',
+          },
+          item3: 
+          {
+            answer:'he most common connection issues between Switch 1 and Switch 2 include VLAN configuration mismatches, trunk port settings incompatibility, and STP convergence problems. To resolve these issues, verify VLAN configurations match on both switches, ensure trunk ports are properly configured, and check spanning tree protocol settings.',
+            question: 'refer to the exhibit. what is the problem between the connection on switch1 and switch2?',
+          },
+    }
   },
+  
 };
